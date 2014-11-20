@@ -8,7 +8,7 @@ iptables -F
 iptables -A INPUT -i lo -j ACCEPT
 
 # ACCEPT current/established connections
-iptables -A INPUT -m conntrack --cststate RELATED,ESTABLISHED -j ACCEPT
+iptables -A INPUT -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
 
 ############### CUSTOMIZE YOUR RULES #################
 # ACCEPT incoming SSH
