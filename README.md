@@ -13,7 +13,7 @@ This role does the following:
 7. Default INPUT and FORWARD to DROP
 8. Default OUTPUT to ACCEPT
 9. Save rules to /etc/iptables/rules.v4
-10. Restart iptables and iptables-persistent. The rules will be re-applied on server restart
+10. Restart iptables-persistent. The rules will be re-applied on server restart!
 
 Requirements
 ------------
