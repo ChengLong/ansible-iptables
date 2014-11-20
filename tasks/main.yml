@@ -1,0 +1,15 @@
+---
+- name: Install prerequisites
+  apt: name={{ item }} state=latest update_cache=yes 
+  with_items:
+    - iptables
+    - iptables-persistent
+
+- name: Apply rules
+  script: basic_iptables_rules.sh 
+
+- name: Restart iptables and iptables-persistent
+  service: name={{ item }} state=restarted enabled=yes 
+  with_items:
+    - iptables
+    - iptables-persistent
